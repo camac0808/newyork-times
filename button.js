@@ -8,13 +8,6 @@ const goBtn = document.getElementById("GoBtn");
 const sideSearchInput = document.getElementById("sideSearchInput");
 const sideGoBtn = document.getElementById("sideGoBtn");
 
-
-hamburgerBtn.addEventListener("click", showSideMenu);
-closeBtn.addEventListener("click", hideSideMenu);
-searchBtn.addEventListener("click", showSearch);
-sideSearchBtn.addEventListener("click", showSideSearch);
-
-
 function showSideMenu() {
   sideMenu.classList.remove("hidden");
 }
@@ -28,9 +21,18 @@ function hideSideMenu() {
 function showSearch() {
   searchInput.classList.toggle("hidden");
   goBtn.classList.toggle("hidden");
+  searchInput.focus();
 }
 
 function showSideSearch() {
   sideSearchInput.classList.toggle("hidden");
   sideGoBtn.classList.toggle("hidden");
+  sideSearchInput.focus();
 }
+
+hamburgerBtn.addEventListener("click", showSideMenu);
+closeBtn.addEventListener("click", hideSideMenu);
+searchBtn.addEventListener("click", showSearch);
+sideSearchBtn.addEventListener("click", showSideSearch);
+
+console.log(hamburgerBtn)

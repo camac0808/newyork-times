@@ -79,13 +79,16 @@
   font-weight: bold;
 }
 
+.side-search-button:hover {
+  background-color: #ebebeb;
+}
+
 .side-search-button {
   width: 30px;
   border: none;
   background-color: white;
   margin-right: auto;
   margin-bottom: 3px;
-  margin-left: 5px;
 }
 
 .side-search-input{
@@ -107,6 +110,10 @@
   opacity: 0.5;
   font-weight: bold;
   height: 30px;
+}
+
+.side-menu-list button:hover {
+  background-color: beige;
 }
 
 .side-menu-list img {
@@ -169,12 +176,24 @@
 .col-lg-8 h2 {
   font-weight: 700;
 }
+
 #hamburderBtn:hover {
   background-color: #ebebeb;
 }
 
 #searchBtn:hover {
   background-color: #ebebeb;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+.pagination a {
+  color: black;
+  font-size: large;
+}
+.pagination a:hover {
+  color: black;
 }
 
 @media screen and (max-width: 992px) {
