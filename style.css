@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
 .head-line {
   margin-top: 1em;
   display: flex;
@@ -10,12 +16,36 @@
   margin: 0 auto;
 }
 
+.weather-box {
+  font-weight: 500;
+  right: 0;
+  top: 30px;
+  position: absolute;
+  height: 25px;
+  font-size: 0.8em;
+}
+
+#weather {
+  display: inline-block;
+}
+
+#icon {
+  display: inline-block;
+}
+
+.time {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
 .head-line button:not(:last-child) {
   width: 30px;
   border: none;
   background-color: white;
 }
-
 
 .menus {
   margin-top: 1em;
@@ -149,6 +179,30 @@
   border-radius: 3px;
 }
 
+.login-button {
+  background-color: #567b95;
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 12px;
+  padding: 7px 9px 5px;
+  border: 1px solid #326891;
+  font-weight: bold;
+  height: 30px;
+  transition: ease 0.6s;
+  cursor: pointer;
+  width: 60px;
+}
+.login-button a {
+  text-decoration: none;
+  font-size: 11px;
+  line-height: 11px;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #387199;
+}
+
 .go-button {
   background-color: rgb(86, 123, 149);
   color: white;
@@ -160,6 +214,7 @@
   opacity: 0.5;
   font-weight: bold;
   height: 30px;
+  transition: ease 0.6s;
 }
 
 .go-button:hover{
@@ -196,6 +251,8 @@
   color: black;
 }
 
+
+
 @media screen and (max-width: 992px) {
   .search-input {
     display: none;
@@ -207,6 +264,12 @@
 
 @media screen and (max-width: 768px) {
   .menus {
+    display: none;
+  }
+  .weather-box {
+    display: none;
+  }
+  .time {
     display: none;
   }
   .sidemenu-icons {

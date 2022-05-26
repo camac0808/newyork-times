@@ -6,7 +6,7 @@ let url = new URL( // 기본 url
 );
 const API_KEY = "Wn6iDfamh_CCZ-HEb7hI0e9fl3TrWF6ZdDB6uk_Z1AE";
 
-// url 부르기
+// news url 부르기
 // 헤더 부르기
 // 데이터 가져오기 (response fetch)
 // 데이터 보여주기 (response.json)
@@ -15,7 +15,7 @@ const getNews = async () => {
     let header = new Headers({
       "x-api-key": API_KEY,
     });
-    url.searchParams.set('page', page);
+    url.searchParams.set("page", page);
     let response = await fetch(url, { headers: header });
     let data = await response.json();
     console.log(data);
@@ -37,7 +37,7 @@ const getNews = async () => {
   }
 };
 
-// 기본 UI
+// news UI
 const render = () => {
   let newsHTML = "";
   newsHTML = news
@@ -81,10 +81,6 @@ const getLatestNews = () => {
 };
 
 getLatestNews();
-
-
-
-
 
 // 카테고리별 클릭
 const topics = document.querySelectorAll(".menus button");
@@ -157,22 +153,25 @@ sideSearchInput.addEventListener("keyup", sideEnterKey);
 
 // pagination
 const pagination = () => {
-  let pageHTML = '';
+  let pageHTML = "";
   // page_group
   // first page
   // last page
   // first~last page print
-  let pageGroup = Math.ceil(page/5);
+  let pageGroup = Math.ceil(page / 5);
   let last = pageGroup * 5;
-  if (last > totalPages) { // totalpage가 13이라고 했을때 last는 15가 되므로 초과했을 경우 
+  if (last > totalPages) {
+    // totalpage가 13이라고 했을때 last는 15가 되므로 초과했을 경우
     last = totalPages; // last를 totalpage로 맞춘다
   }
-  let first = (last - 4 <= 0) ? 1 : last - 4; 
+  let first = last - 4 <= 0 ? 1 : last - 4;
   // let first = last - 4;
   let prev = first - 1;
   let next = last + 1;
-  for (let i=first; i<=last; i++) {
-    pageHTML += `<li class="page-item ${page == i ? "active" : ""}"><a class="page-link" href="#" onclick="movePage(${i})">${i}</a></li>`
+  for (let i = first; i <= last; i++) {
+    pageHTML += `<li class="page-item ${
+      page == i ? "active" : ""
+    }"><a class="page-link" href="#" onclick="movePage(${i})">${i}</a></li>`;
   }
 
   let pageListHTML = `<li class="page-item ${first < 6 ? "hidden" : ""}">
@@ -198,7 +197,6 @@ const pagination = () => {
 // pagination 안에 클릭이벤트
 const movePage = (pageNumber) => {
   page = pageNumber;
-  console.log(page)
+  console.log(page);
   getNews();
 };
-
