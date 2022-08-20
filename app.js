@@ -1,10 +1,8 @@
 let news = []; // 가져온 데이터 배열에 정리
 let page = 1;
 let totalPages = 0;
-let url = new URL( // 기본 url
-  "https://api.newscatcherapi.com/v2/latest_headlines?countries=KR&page_size=10"
-);
-const API_KEY = "Wn6iDfamh_CCZ-HEb7hI0e9fl3TrWF6ZdDB6uk_Z1AE";
+let url = new URL("https://api.newscatcherapi.com/v2/latest_headlines?countries=KR&page_size=10"); // 기본 url
+const API_KEY = "yxsV2wkSblU88X5C4wcHQ1YBYiizSQCex6TzvXRu6nQ";
 
 // news url 부르기
 // 헤더 부르기
@@ -45,9 +43,11 @@ const render = () => {
       return `<div class="row news">
     <div class="col-lg-4">
       <img class="news-img-size" src=${
-        item.media ||
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
-      }/>
+        item.media
+          ? item.media
+          : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqEWgS0uxxEYJ0PsOb2OgwyWvC0Gjp8NUdPw&usqp=CAU"
+      }        
+      />
     </div>
     <div class="col-lg-8">
       <h2>${item.title}</h2>
@@ -58,9 +58,7 @@ const render = () => {
           ? item.summary.substring(0, 200) + "..."
           : item.summary
       }</p>
-      <div>${item.rights || "no source"} / ${moment(
-        item.published_date
-      ).fromNow()}</div>
+      <div>${item.rights || "no source"} / ${moment(item.published_date).fromNow()}</div>
     </div>
   </div>`;
     })
@@ -109,18 +107,14 @@ sideTopics.forEach((menu) =>
 // search button 키워드 검색
 const keywordSearch = async () => {
   let keyword = searchInput.value;
-  url = new URL(
-    `https://api.newscatcherapi.com/v2/search?q=${keyword}&page_size=10`
-  );
+  url = new URL(`https://api.newscatcherapi.com/v2/search?q=${keyword}&page_size=10`);
   getNews();
 };
 
 // side search button 키워드 검색
 const sideKeywordSearch = async () => {
   let sideKeyword = sideSearchInput.value;
-  url = new URL(
-    `https://api.newscatcherapi.com/v2/search?q=${sideKeyword}&page_size=10`
-  );
+  url = new URL(`https://api.newscatcherapi.com/v2/search?q=${sideKeyword}&page_size=10`);
   getNews();
 };
 
