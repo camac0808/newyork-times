@@ -32,20 +32,6 @@ Newscatcher api를 사용해 만들었습니다.<br>
 ### 5. 하단에 pagination 구현
 ![페이지네이션](pagination.PNG)
 
-## 배포
-```sh
-npm i gh-pages
-npm run build
-npm run deploy
-```
-
-## 향후 업데이트 예정
-시간이 너무 지체되서 취업하면서 계속 수정할 예정입니다!
-
-* 반응형 구현
-* node.js 활용하여 cache이용. 페이지 뒤로가기 앞으로가기
-* 상세페이지 css 꾸미기
-
 ## 정보
 
 💌메일 – zqzwzazs@gmail.com - gomgom_@naver.com
