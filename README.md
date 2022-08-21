@@ -12,31 +12,24 @@ Newscatcher api를 사용해 만들었습니다.<br>
 
 * Javascript ES6
 * Bootstrap
+* Weather api
+* Newscatcher api
 
 ## 프로젝트의 기능 설명
 
-### 1. api fetch loading시 간단한 이모티콘 애니메이션을 추가
-![로딩](loading.gif)
+### 1. sidebar기능을 통해 카테고리별로 분류
+![로딩](sidebar.PNG)
 
-### 2. header search 기능 및 hover transition 추가
-![헤더](searchbar.gif)
+### 2. header searchbar 기능, 돋보기 아이콘 누르면 searchbar 
+![헤더](searchbar.PNG)
 
-### 3. hamburger button을 눌러서 sidebar 나오는 transition 구현
-![사이드바](sidebar.gif)
+### 3. 반응형 웹
+![반응형웹](responsive.PNG)
 
-### 4. login button에 간단한 hover transition과 blur 넣어서 빛나는듯한 효과 구현
-![로그인버튼](login-blur.gif)
+### 4. Weather api 사용하여 날씨 표시
+![날씨](weather.PNG)
 
-### 5. boot-strap을 이용하여 login-page 간단하게 구현 (로그인은 되지 않습니다)
-![로그인페이지](loginpage.PNG)
-
-### 6. 첫페이지 랜딩시 AOS 라이브러리를 사용하여 game-card 및 title에 fade 효과 구현
-![랜딩페이지](aos.gif)
-
-### 7. game-card에 마우스 hover시 상세페이지로 연결되는 link와 간단한 상세정보 하단에 나오도록 구현
-![상세페이지](detailpage.gif)
-
-### 8. 하단에 pagination 구현
+### 5. 하단에 pagination 구현
 ![페이지네이션](pagination.PNG)
 
 ## 배포
