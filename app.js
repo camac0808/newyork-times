@@ -41,7 +41,7 @@ const render = () => {
   newsHTML = news
     .map((item) => {
       return `<div class="row news">
-    <div class="col-lg-4">
+    <div class="col-md-4">
       <img class="news-img-size" src=${
         item.media
           ? item.media
@@ -49,7 +49,7 @@ const render = () => {
       }        
       />
     </div>
-    <div class="col-lg-8">
+    <div class="col-md-8">
       <h2>${item.title}</h2>
       <p>${
         item.summary == null || item.summary == ""
