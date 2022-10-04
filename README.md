@@ -1,8 +1,8 @@
 # 🎮 Newyork Times
 > 뉴욕타임즈 사이트를 통해 뉴스를 확인해보세요!
 
-Newscatcher api를 사용해 만들었습니다.<br>
-실시간 뉴스기사를 접할 수 있습니다.<br><br>
+Using Newscatcher API
+https://newscatcherapi.com/
 ### 보러가기: <https://camac0808.github.io/newyork-times>
 
 ![메인페이지](mainpage.PNG)
