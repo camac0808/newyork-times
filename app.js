@@ -2,7 +2,7 @@ let news = []; // 가져온 데이터 배열에 정리
 let page = 1;
 let totalPages = 0;
 let url = new URL("https://api.newscatcherapi.com/v2/latest_headlines?countries=KR&page_size=10"); // 기본 url
-const API_KEY = "yxsV2wkSblU88X5C4wcHQ1YBYiizSQCex6TzvXRu6nQ";
+const API_KEY = "cN4jX4nlRksgMGqiqhLEgJSINNf8LrGxqu04J_vBgBA";
 
 // news url 부르기
 // 헤더 부르기
